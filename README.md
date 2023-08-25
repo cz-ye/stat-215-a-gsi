@@ -34,7 +34,7 @@ Fridays, 9-11am, Evans 334
 
 (*Bin*: TBA)
 
-(*Theo*: Time TBA, Evans 444)
+(*Chengzhong*: Time TBA, Evans 444)
 
 # Class website
 
