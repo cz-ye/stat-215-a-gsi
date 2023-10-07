@@ -1,0 +1,53 @@
+%% LyX 2.2.3 created this file.  For more info, see http://www.lyx.org/.
+%% Do not edit unless you really know what you are doing.
+\documentclass[english]{article}
+\usepackage[T1]{fontenc}
+\usepackage[latin9]{inputenc}
+\usepackage{geometry}
+\geometry{verbose,tmargin=1in,bmargin=1in,lmargin=1in,rmargin=1in}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\setlength{\parskip}{\smallskipamount}
+\setlength{\parindent}{0pt}
+\usepackage{url}
+\usepackage{enumitem}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{xcolor}
+
+\makeatletter
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Textclass specific LaTeX commands.
+\numberwithin{equation}{section}
+\numberwithin{figure}{section}
+\newlength{\lyxlabelwidth}      % auxiliary length 
+
+\@ifundefined{date}{}{\date{}}
+\makeatother
+
+\usepackage{babel}
+\begin{document}
+
+\title{Homework 3\linebreak{}
+Stat 215A, Fall 2023}
+\maketitle
+\begin{center}
+\textbf{Due:} push a \texttt{homework3.pdf} file \textbf{Gradescope} by \textbf{Monday, October 23 11:59pm} \\
+\par\end{center}
+
+\section{EM Algorithm}
+Suppose $X_{1}, \ldots, X_{n}$ are i.i.d. observations from a mixture of two Poisson distributions, Pois $\left(\mu_{0}\right)$ and $\operatorname{Pois}\left(\mu_{1}\right)$, with mixing probabilities of $\pi$ and $1-\pi$, respectively. That is, there is an initial probability $\pi$ that an observation $X_{i}$ is drawn from $\operatorname{Pois}\left(\mu_{0}\right)$ and probability $1-\pi$ from $\operatorname{Pois}\left(\mu_{1}\right)$.
+Recall that if $X \sim \operatorname{Pois}(\mu)$, the probability density function is given by
+\begin{align}
+    p_{\mu}(x)=\frac{\mu^{x} e^{-\mu}}{x !}
+\end{align}
+\begin{itemize}
+    \item Define the observed data vector, the latent variable vector, and the distribution of the latent variable.
+    \item Write down the E step for estimating $\mu_{0}, \mu_{1}, \pi$.
+    \item Write down the $\mathrm{M}$ step for estimating $\mu_{0}, \mu_{1}, \pi$.
+    \item Give an initial estimator to start the EM algorithm.
+    \item Write $R$ code to implement the $E$ and $M$ steps.
+    \item Simulate data from a mixture of two Poisson distributions, where you know the true parameters, and run your EM algorithm on the simulated data. Show the accuracy of EM clustering as you vary the values of $\mu_{0}$ and $\mu_{1}$.
+    \item Now simulate data from a mixture of two binomial distributions, $\operatorname{Binom}\left(100, \pi_{0}\right)$ and $\operatorname{Binom}\left(100, \pi_{1}\right)$. Show the accuracy of your Poisson EM clustering algorithm as you vary the values of $\pi_{0}$ and $\pi_{1}$ in this misspecified model.
+\end{itemize}
+
+\end{document}
